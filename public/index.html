@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mrlOnsf Ultimate</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="container">
+    <div class="logo"></div>
+    <h1>mrlOnsf Ultimate</h1>
+    <div class="input-bar">
+      <div class="plus-btn" onclick="toggleMenu()">+</div>
+      <input type="text" id="query" placeholder="Спроси что-нибудь...">
+      <div class="send-btn" onclick="sendQuery()">↑</div>
+    </div>
+    <div id="result">
+      <p class="progress">Готовность: 0%</p>
+    </div>
+  </div>
+
+  <div id="menu" class="menu">
+    <button onclick="generateImage()">Картинка</button>
+    <button onclick="generateRecipe()">Рецепт + ккал</button>
+    <button onclick="googleSearch()">Поиск Google</button>
+    <button onclick="solveMath()">Математика</button>
+    <button onclick="makePresentation()">Презентация PPTX</button>
+    <button onclick="document.getElementById('fileInput').click()">Фото/Документ</button>
+    <button onclick="voiceInput()">Голос</button>
+    <button onclick="randomFact()">Факт</button>
+    <button onclick="switchAccount()">Сменить аккаунт</button>
+  </div>
+
+  <a href="mailto:mishkir2013@gmail.com" class="support">Поддержка</a>
+  <div class="footer">by mitrsht © 2025</div>
+  <input type="file" id="fileInput" style="display:none" onchange="handleFile(this.files)">
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
